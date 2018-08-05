@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Message Me</title>
+	<link rel="stylesheet" type="text/css" href="a2.css">
+</head>
+<body>
+<?php include('a4.php'); ?>
+<div class="form">
+	<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+		<h2 id="h2">Message Me</h2>
+		<h3 id="h3">Contact me today, get a reply in next 24 hours ! </h3>
+	<input type="text" name="name" placeholder="Type your name" class="input" value="<?= $name ?>"><br>
+	<span class="error"><?= $name_error ?></span>
+	<input type="text" name="email" placeholder="Type your email address" class="input" value="<?= $email ?>"><br>
+	<span class="error"><?= $email_error ?></span>
+	 <input type="text" name="phone" placeholder="Type your phone no." class="input" value="<?= $phone ?>"><br>	
+	<input type="text" name="message" placeholder="Type a message for me" class="input" id="message" required><br>
+	<span class="error"><?= $message_error ?></span>
+	<input type="submit" name="Submit" id="submit">
+	<div class="success"><?= $success ?></div>
+    </form>
+	
+</div>
+</body>
+</html>
